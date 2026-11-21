@@ -97,7 +97,7 @@ func TestSSHConfigNeverExecutesOrReadsReferencedFiles(t *testing.T) {
 func TestSSHConfigSkipsUnsupportedRoutesAndAuthentication(t *testing.T) {
 	for _, option := range []string{
 		"ProxyCommand arbitrary-command SECRET", "ProxyJump jump", "CanonicalizeHostname yes",
-		"IdentitiesOnly yes", "IdentityAgent none", `IdentityAgent \\server\pipe\agent`,
+		"IdentitiesOnly yes", "IdentityAgent none", `IdentityAgent ""`, `IdentityAgent \\server\pipe\agent`,
 		"IdentityAgent ${SSH_AUTH_SOCK}", "HostName %n.example", "HostName ${TARGET}",
 		"Port 0", "Port 65536", "Port nope", "Port 22 23", "CertificateFile key-cert.pub",
 		"Hostname a..b", "RemoteCommand command SECRET", "PKCS11Provider library",

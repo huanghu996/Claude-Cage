@@ -58,7 +58,7 @@ func WindowsSSHConfig() (SSHConfigPreview, error) {
 	defer f.Close()
 	info, err := f.Stat()
 	if err != nil || !info.Mode().IsRegular() || info.Size() > 1<<20 {
-		return SSHConfigPreview{}, failure("ssh_config_invalid", "SSH 配置必须是小于 1 MiB 的普通文件")
+		return SSHConfigPreview{}, failure("ssh_config_invalid", "SSH 配置必须是不超过 1 MiB 的普通文件")
 	}
 	return parseSSHConfig(f, os.Getenv("USERNAME"))
 }
@@ -289,6 +289,9 @@ func sshConfigProfile(alias, defaultUser string, values map[string][]string) (Ho
 		return HostProfile{}, "SSH 端口无效"
 	}
 	socket := get("identityagent", "")
+	if value, exists := values["identityagent"]; exists && value[0] == "" {
+		return HostProfile{}, "IdentityAgent 不能为空，请手动选择认证方式"
+	}
 	if socket == "SSH_AUTH_SOCK" {
 		socket = ""
 	}
