@@ -2668,5 +2668,12 @@
   "保留旧 Ubuntu 环境并新建 Debian": "Hay deegaanka Ubuntu ee hore oo samee Debian cusub",
   "保留旧 Ubuntu 环境并新建 Debian？": "Ma la hayaa deegaanka Ubuntu ee hore oo la sameeyaa Debian cusub?",
   "旧 Ubuntu 环境会原样移到数据目录的 state/guests-removed 文件夹，不删除任何文件。随后 Cage 下载并创建新的 Debian 环境；旧环境里的文件和登录状态不会带到新环境。": "Deegaanka Ubuntu ee hore sidiisa ayaa loo rarayaa galka state/guests-removed ee ku jira galka xogta, fayl lama tirtirayo. Kadib Cage wuxuu soo dejinayaa oo samaynayaa deegaan Debian cusub; faylasha iyo xaaladda gelitaanka ee deegaanka hore looma gudbinayo deegaanka cusub.",
-  "保留并新建 Debian": "Hay oo samee Debian"
+  "保留并新建 Debian": "Hay oo samee Debian",
+  "导入 Windows SSH 配置": "Soo deji habaynta Windows SSH",
+  "从 %USERPROFILE%\\.ssh\\config 读取主机，使用本机 SSH agent；请先用 ssh-add 添加密钥。": "Martigeliyeyaasha waxaa laga akhriyaa %USERPROFILE%\\.ssh\\config waxaana la isticmaalaa SSH agent-ka maxalliga ah; marka hore furayaasha ku dar ssh-add.",
+  "私钥、转发和其他 SSH 选项不会导入。已有主机不会覆盖，首次连接仍需核对指纹。": "Furayaasha gaarka ah, gudbinta iyo xulashooyinka kale ee SSH lama soo dejiyo. Martigeliyeyaasha jira lama beddelo. Xaqiiji faraha furaha marka ugu horreysa ee la xiriirayo.",
+  "没有可导入的主机。": "Ma jiraan martigeliyeyaal la soo dejin karo.",
+  "已跳过的主机": "Martigeliyeyaasha la dhaafay",
+  "导入所选主机（{0}）": "Soo deji martigeliyeyaasha la doortay ({0})",
+  "已导入 {0} 台主机，跳过 {1} 台已有主机。": "Waxaa la soo dejiyay {0} martigeliye, waxaana la dhaafay {1} martigeliye oo jira."
 }

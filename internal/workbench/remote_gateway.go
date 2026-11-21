@@ -104,6 +104,10 @@ func (s *Server) clientRequest(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	path := strings.TrimPrefix(r.URL.Path, "/api/client/")
+	if path == "ssh-config" {
+		s.clientSSHConfig(w, r)
+		return
+	}
 	if path == "browser-extensions" && (r.Method == http.MethodGet || r.Method == http.MethodPost) {
 		s.localBrowserExtensions(w, r)
 		return
